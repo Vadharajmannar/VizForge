@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <h1>Upload Dataset and Select Graph Type</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="dataset" accept=".csv" required><br><br>
+        <label for="graph_type">Select Graph Type:</label>
+        <select name="graph_type" id="graph_type" required>
+            <option value="bar">Bar Graph</option>
+            <option value="box">Box Plot</option>
+            <option value="scatter">Scatter Plot</option>
+            <option value="donut">Donut Graph</option>
+        </select><br><br>
+        <button type="submit">Upload and Generate Graph</button>
+    </form>
+</body>
+</html>

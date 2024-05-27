@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Heatmap</title>
+</head>
+<body>
+    <h1>Generated Heatmap</h1>
+    <img id="heatmap-image" src="" alt="Heatmap Image">
+    <script>
+        // Function to fetch and display the heatmap image
+        async function fetchHeatmap() {
+            try {
+                // Fetch the heatmap image from the Flask server
+                const response = await fetch('/generate_heatmap');
+                
+                // Check if the response is successful
+                if (!response.ok) {
+                    throw new Error('Failed to fetch heatmap image');
+                }
+                
+                // Convert the response to a blob
+                const blob = await response.blob();
+                
+                // Create a blob URL for the heatmap image
+                const url = URL.createObjectURL(blob);
+                
+                // Set the src attribute of the heatmap image element
+                document.getElementById('heatmap-image').src = url;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        
+        // Call fetchHeatmap function when the page loads
+        window.onload = fetchHeatmap;
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function handleFileUpload(event) {
+            const fileInput = document.getElementById('dataset');
+            const graphSelect = document.getElementById('graph_type');
+
+            fileInput.click();
+
+            fileInput.onchange = () => {
+                if (fileInput.files.length > 0) {
+                    graphSelect.style.display = 'block';
+                }
+            };
+        }
+
+        function handleGraphSelection(event) {
+            const form = document.getElementById('graph_form');
+            form.submit();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container-next">
+            <h1>VizForge</h1>
+            <ul id="nav-main">
+                <li><a href="all.html">All</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="input.html">INPUT</a></li>
+            </ul>
+        </div>        
+    </header>
+    <section class="content">
+        <div class="container">
+            <h1>DATA VISUALIZATIONS</h1>
+            <p>SELECT A GRAPH TO KNOW THE INFORMATION FROM THE GRAPHS BELOW. YOU CAN UPLOAD AND GENERATE THE GRAPH YOU SELECTED</p>
+        </div>
+        <div class="image-container">
+            <a href="visualization_info.html?img=images/download (3).png&title=Bar%20Graph&info=A%20bar%20graph%20is%20a%20visual%20representation%20of%20data%20using%20rectangular%20bars%20of%20varying%20heights%20or%20lengths%20to%20illustrate%20the%20values%20of%20different%20categories.%20With%20a%20vertical%20axis%20(y-axis)%20representing%20the%20measured%20values%20and%20a%20horizontal%20axis%20(x-axis)%20denoting%20the%20categories,%20each%20bar%20corresponds%20to%20a%20specific%20category,%20with%20its%20length%20or%20height%20proportional%20to%20the%20value%20it%20represents.%20Bar%20graphs%20serve%20to%20compare%20discrete%20categories%20effectively,%20enabling%20quick%20identification%20of%20relationships%20and%20trends%20within%20the%20data.%20They%20come%20in%20various%20forms,%20including%20vertical,%20horizontal,%20grouped,%20and%20stacked%20bar%20graphs,%20each%20suited%20to%20different%20data%20presentation%20needs.%20While%20versatile%20and%20widely%20used%20in%20fields%20like%20economics,%20business,%20and%20sciences,%20bar%20graphs%20have%20limitations,%20particularly%20in%20representing%20continuous%20data%20and%20the%20potential%20for%20skewed%20perceptions%20based%20on%20axis%20scaling.%20Nonetheless,%20they%20remain%20a%20valuable%20tool%20for%20data%20visualization%20and%20analysis%20across%20diverse%20domains."><img src="images/download (3).png" alt="Bar Graph"></a>
+            <a href="visualization_info.html?img=images/download%20(1).png&title=Box%20Plot&info=A%20histogram%20is%20a%20graphical%20representation%20of%20the%20distribution%20of%20numerical%20data,%20where%20data%20values%20are%20grouped%20into%20intervals%20called%20bins,%20and%20the%20height%20of%20each%20bar%20represents%20the%20frequency%20or%20count%20of%20data%20points%20falling%20within%20that%20bin.%20Unlike%20bar%20graphs,%20which%20depict%20discrete%20categories,%20histograms%20are%20used%20for%20continuous%20data%20and%20display%20the%20frequency%20distribution%20of%20a%20dataset.%20Typically,%20the%20horizontal%20axis%20represents%20the%20range%20of%20values,%20divided%20into%20evenly%20spaced%20intervals,%20while%20the%20vertical%20axis%20shows%20the%20frequency%20or%20count%20of%20data%20points%20within%20each%20interval.%20Histograms%20are%20commonly%20used%20in%20statistics,%20data%20analysis,%20and%20quality%20control%20to%20visualize%20the%20distribution%20and%20spread%20of%20data,%20identify%20patterns,%20and%20detect%20outliers%20or%20anomalies.%20They%20provide%20valuable%20insights%20into%20the%20central%20tendency,%20variability,%20and%20shape%20of%20a%20dataset,%20facilitating%20informed%20decision-making%20and%20analysis.%20Properly%20constructed%20histograms%20offer%20a%20clear%20and%20concise%20representation%20of%20data%20distribution,%20helping%20users%20to%20understand%20and%20interpret%20the%20underlying%20patterns%20effectively."><img src="images/bar graph.png" alt="Box Plot"></a>
+            <a href="visualization_info.html?img=images/download%20(2).png&title=Count%20Plot&info=A%20scatterplot%20is%20a%20type%20of%20graph%20that%20displays%20the%20relationship%20between%20two%20variables%20by%20plotting%20individual%20data%20points%20on%20a%20two-dimensional%20plane.%20Each%20data%20point%20represents%20the%20value%20of%20one%20variable%20on%20the%20horizontal%20axis%20(x-axis)%20and%20the%20value%20of%20the%20other%20variable%20on%20the%20vertical%20axis%20(y-axis).%20Scatterplots%20are%20particularly%20useful%20for%20visualizing%20correlations%20or%20patterns%20between%20variables,%20allowing%20analysts%20to%20assess%20the%20strength,%20direction,%20and%20form%20of%20the%20relationship.%20The%20distribution%20of%20data%20points%20on%20the%20plot%20can%20indicate%20trends,%20clusters,%20or%20outliers%20within%20the%20dataset.%20Additionally,%20scatterplots%20can%20reveal%20insights%20into%20the%20nature%20of%20the%20relationship,%20such%20as%20whether%20it's%20linear,%20nonlinear,%20positive,%20negative,%20or%20has%20no%20discernible%20pattern.%20They%20are%20commonly%20used%20in%20various%20fields,%20including%20science,%20social%20sciences,%20economics,%20and%20engineering,%20for%20exploratory%20data%20analysis,%20hypothesis%20testing,%20and%20model%20building.%20Proper%20labeling%20and%20interpretation%20of%20scatterplots%20are%20essential%20for%20drawing%20meaningful%20conclusions%20and%20making%20informed%20decisions%20based%20on%20the%20observed%20patterns."><img src="images/download (2).png" alt="Count Plot"></a>
+        </div>
+</div>
+        <div class="image-container">
+            <form id="graph_form" action="/generate_graph" method="post" enctype="multipart/form-data">
+                <input type="file" id="dataset" name="dataset" accept=".csv" style="display: none;">
+                <button type="button" onclick="handleFileUpload()">Upload Dataset</button><br><br>
+                <label for="graph_type" style="display: none;" id="graph_label">Select Graph Type:</label>
+                <select name="graph_type" id="graph_type" style="display: none;" onchange="handleGraphSelection()">
+                    <option value="bar">Bar Graph</option>
+                    <option value="box">Box Plot</option>
+                    <option value="scatter">Scatter Plot</option>
+                    <option value="donut">Donut Graph</option>
+                </select><br><br>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; <span class="highlight">2024</span> VizForge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

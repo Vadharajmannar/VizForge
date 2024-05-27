@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV</title>
+</head>
+<body>
+    <h1>Upload CSV to Generate Bar Graph</h1>
+    <form action="/generate_bar_graph" method="post" enctype="multipart/form-data">
+        <input type="file" name="smartphones" accept=".csv">
+        <button type="submit">Upload and Generate Graph</button>
+    </form>
+
+    {% if image_path %}
+    <h2>Generated Bar Graph:</h2>
+    <img src="{{ image_path }}" alt="Bar Graph">
+    {% endif %}
+</body>
+</html>

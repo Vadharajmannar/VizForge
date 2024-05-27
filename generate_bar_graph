@@ -1,0 +1,33 @@
+from flask import Flask, request, render_template
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+import os
+
+app = Flask(__name__)
+
+@app.route('/generate_bar_graph', methods=['POST'])
+def generate_bar_graph():
+    print('hello')
+    # Load dataset from uploaded file
+  #  dataset = request.files['dataset']
+  #  df = pd.read_csv(dataset)
+  #  df
+#    return render_template('df')
+
+    # Create a directory to save visualizations if it doesn't exist
+  #  if not os.path.exists("visualizations"):
+   #     os.makedirs("visualizations")
+
+    # Generate the bar plot
+   # plt.figure(figsize=(10, 6))
+    #sns.barplot(x='RAM', y='Storage', data=df)
+    #plt.title('Bar Plot between RAM and Storage')
+    #plt.savefig("visualizations/barplot_column5_column6.png")
+    #plt.close()
+
+ #   return render_template('bar_graph.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

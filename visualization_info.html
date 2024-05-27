@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Information</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const img = urlParams.get('img');
+            const title = urlParams.get('title');
+            const info = urlParams.get('info');
+            if (img && title && info) {
+                document.getElementById('visualization-title').innerText = title;
+                document.getElementById('visualization-image').src = img;
+                document.getElementById('visualization-info').innerText = info;
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VizForge</h1>
+        </div>
+    </header>
+
+    <section class="visualization-info">
+        <div class="container">
+            <h2 id="visualization-title">Visualization Information</h2>
+            <div class="image-container">
+                <img id="visualization-image" src="" alt="Clicked Image">
+            </div>
+            <div class="info">
+                <h3>Information</h3>
+                <p id="visualization-info"></p>
+            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span class="highlight">2024</span> VizForge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

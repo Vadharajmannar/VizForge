@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAMILY</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            padding: 20px;
+            border: 1px solid #cccccc00;
+            border-radius: 5px;
+            cursor: pointer; /* Change cursor to pointer */
+            transition: transform 0.2s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        .data {
+            font-weight: bold;
+            color: #333;
+        }
+        .box:nth-child(1) {
+            background-color: rgba(250, 239, 204, 0.63);
+        }
+        .box:nth-child(2) {
+            background-color: rgba(255, 203, 245, 0.63);
+        }
+        .box:nth-child(3) {
+            background-color: rgba(244, 253, 186, 0.63);
+        }
+        .box:nth-child(4) {
+            background-color: rgba(255, 202, 202, 0.63);
+        }
+        .box:nth-child(5) {
+            background-color: rgba(199, 255, 213, 0.63);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-next">
+            <h1>VizForge</h1>
+            <ul id="nav-main">
+                <li><a href="all.html">All</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="input.html">INPUT</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="box" onclick="window.location.href='chart.html'">
+            <h2>CHART</h2>
+            <p class="data">A chart is a graphical representation of data, typically used to visualize and interpret numerical information. <br>Charts help to convey complex data sets in a clear and concise manner.<br> Common types of charts include bar charts, line charts, pie charts, scatter plots, and more.</p>
+        </div>
+        <div class="box" onclick="window.location.href='diagram.html'">
+            <h2>DIAGRAM</h2>
+            <p class="data">A diagram is a visual representation of information or a process, often using symbols, shapes, and lines to illustrate relationships and concepts. Diagrams are commonly used in various fields, including mathematics, science, engineering, and business, to clarify complex ideas and facilitate understanding.</p>
+        </div>
+        <div class="box" onclick="window.location.href='geospatial.html'">
+            <h2>GEOSPATIAL</h2>
+            <p class="data">Geospatial refers to data that is associated with a specific location on Earth's surface. Geospatial data often includes geographic coordinates (latitude and longitude) and other attributes such as elevation, land use, population density, etc. Geospatial analysis involves analyzing and visualizing data in relation to its geographic location.</p>
+        </div>
+        <div class="box" onclick="window.location.href='plot.html'">
+            <h2>PLOT</h2>
+            <p class="data">In the context of data visualization, a plot refers to a graphical representation of data points on a coordinate system. Plots are used to visualize relationships between variables, patterns in data, and trends over time. Common types of plots include scatter plots, line plots, histogram plots, and box plots.</p>
+        </div>
+        <div class="box" onclick="window.location.href='table.html'">
+            <h2>TABLE</h2>
+            <p class="data">A table is a structured arrangement of data organized into rows and columns. Each intersection of a row and column in a table represents a single data point. Tables are commonly used to display structured data, making it easy to compare and analyze information.</p>
+        </div>
+    </div>
+</body>
+</html>

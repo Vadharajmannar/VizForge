@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Visualizations</title>
+    <style>
+        /* CSS styles */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customize Visualizations</h1>
+        <div class="color-picker">
+            <label for="color">Select Color:</label>
+            <input type="color" id="color" value="#ff0000">
+        </div>
+        <div class="image-preview">
+            <h2>Preview:</h2>
+            <img id="preview-image" src="" alt="Preview Image">
+            <a href="">code</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to update the image color
+        function updateImageColor() {
+            var color = document.getElementById('color').value;
+            var previewImage = document.getElementById('preview-image');
+            previewImage.style.filter = "hue-rotate(" + color + ")";
+        }
+
+        // Add event listener for color input change
+        document.getElementById('color').addEventListener('input', updateImageColor);
+
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Get the image name from the URL parameter
+        var imageName = getUrlParameter('image');
+
+        // Set the source of the preview image based on the image name
+        if (imageName) {
+            document.getElementById('preview-image').src = imageName;
+        }
+
+        // Initial call to update the image color
+        updateImageColor();
+    </script>
+</body>
+</html>
